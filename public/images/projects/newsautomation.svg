@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="newsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a141a"/>
+      <stop offset="100%" stop-color="#14242e"/>
+    </linearGradient>
+
+    <pattern id="cyanHalftone2" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="8" r="1.5" fill="#20C9E8" opacity="0.16"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#newsBg)"/>
+  <rect width="800" height="500" fill="url(#cyanHalftone2)"/>
+
+  <!-- Top Pipeline Header Bar -->
+  <rect x="25" y="25" width="750" height="42" rx="8" fill="#0e1d27" stroke="#20C9E8" stroke-width="1.5" stroke-opacity="0.4"/>
+  <circle cx="45" cy="46" r="6" fill="#06B6D4"/>
+  <text x="65" y="50" font-family="'Courier New', monospace" font-size="12" font-weight="bold" fill="#F5EBDD" letter-spacing="1">AI-POWERED MULTILINGUAL NEWS AUTOMATION // RAG &amp; RPA PIPELINE</text>
+  
+  <rect x="525" y="34" width="115" height="24" rx="4" fill="#06B6D4" fill-opacity="0.2" stroke="#06B6D4" stroke-width="1"/>
+  <text x="538" y="50" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#20C9E8">RAG ENGINE: VECTOR DB</text>
+
+  <rect x="650" y="34" width="115" height="24" rx="4" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1"/>
+  <text x="663" y="50" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#10B981">UIPATH: EXECUTING</text>
+
+  <!-- Left: End-to-End Pipeline Visualization -->
+  <g transform="translate(40, 95)">
+    <rect width="440" height="330" rx="12" fill="#0c1820" stroke="#20C9E8" stroke-width="1.5"/>
+
+    <!-- Ingestion Stage -->
+    <rect x="15" y="15" width="410" height="55" rx="8" fill="#122430" stroke="#10B981" stroke-width="1"/>
+    <text x="30" y="36" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#10B981">01. MULTI-SOURCE INGESTION &amp; VECTOR EMBEDDING</text>
+    <text x="30" y="54" font-family="'Courier New', monospace" font-size="9" fill="#F5EBDD">Reuters, BBC, TechCrunch RSS &#8226; 4,200 Articles Ingested/hr &#8226; RAG Indexing</text>
+
+    <!-- LLM Summarization & Fact Checking -->
+    <rect x="15" y="80" width="410" height="70" rx="8" fill="#122430" stroke="#FFD600" stroke-width="1"/>
+    <text x="30" y="102" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#FFD600">02. LLM CONTEXTUAL SYNTHESIS &amp; DEDUPLICATION</text>
+    <text x="30" y="122" font-family="'Courier New', monospace" font-size="9" fill="#F5EBDD">Extractive &amp; Abstractive Summarization &#8226; Sentiment: Neutral (0.98)</text>
+    <text x="30" y="138" font-family="'Courier New', monospace" font-size="9" fill="#20C9E8">Cosine Similarity Threshold: 0.88 &#8226; Hallucination Guardrails: PASS</text>
+
+    <!-- Multilingual Translation Matrix -->
+    <rect x="15" y="160" width="410" height="90" rx="8" fill="#0a141b" stroke="#6536D9" stroke-width="1"/>
+    <text x="30" y="182" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#F42B70">03. REGIONAL MULTILINGUAL TRANSLATION MATRIX</text>
+    
+    <g transform="translate(30, 195)">
+      <!-- English pill -->
+      <rect x="0" y="0" width="85" height="24" rx="4" fill="#20C9E8" fill-opacity="0.2" stroke="#20C9E8" stroke-width="1"/>
+      <text x="8" y="16" font-family="'Courier New', monospace" font-size="9" font-weight="bold" fill="#20C9E8">EN: SOURCE</text>
+
+      <text x="95" y="16" font-family="'Courier New', monospace" font-size="12" fill="#F42B70">→</text>
+
+      <!-- Tamil pill -->
+      <rect x="115" y="0" width="75" height="24" rx="4" fill="#6536D9" fill-opacity="0.3" stroke="#6536D9" stroke-width="1"/>
+      <text x="123" y="16" font-family="'Courier New', monospace" font-size="9" font-weight="bold" fill="#F5EBDD">தமிழ் (TAMIL)</text>
+
+      <!-- Hindi pill -->
+      <rect x="200" y="0" width="75" height="24" rx="4" fill="#6536D9" fill-opacity="0.3" stroke="#6536D9" stroke-width="1"/>
+      <text x="210" y="16" font-family="'Courier New', monospace" font-size="9" font-weight="bold" fill="#F5EBDD">हिंदी (HINDI)</text>
+
+      <!-- Telugu pill -->
+      <rect x="285" y="0" width="85" height="24" rx="4" fill="#6536D9" fill-opacity="0.3" stroke="#6536D9" stroke-width="1"/>
+      <text x="295" y="16" font-family="'Courier New', monospace" font-size="9" font-weight="bold" fill="#F5EBDD">తెలుగు (TELUGU)</text>
+    </g>
+    <text x="30" y="240" font-family="'Courier New', monospace" font-size="9" fill="#10B981">BLEU Score: 41.2 &#8226; IndicTrans2 Transformer Architecture</text>
+
+    <!-- UiPath RPA & SMTP Broadcast -->
+    <rect x="15" y="260" width="410" height="55" rx="8" fill="#122430" stroke="#20C9E8" stroke-width="1"/>
+    <text x="30" y="280" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#20C9E8">04. UIPATH ROBOTIC DISPATCH // SMTP EMAIL DIGEST</text>
+    <text x="30" y="298" font-family="'Courier New', monospace" font-size="9" fill="#F5EBDD">Automated Morning Digest Sent to 1,250 Subscribers &#8226; 0 Failures</text>
+  </g>
+
+  <!-- Right: Newsletter Output & Execution Telemetry -->
+  <g transform="translate(505, 95)">
+    <rect width="255" height="330" rx="12" fill="#0d1b22" stroke="#20C9E8" stroke-width="1.5" stroke-opacity="0.5"/>
+    
+    <text x="20" y="32" font-family="'Courier New', monospace" font-size="11" font-weight="bold" fill="#20C9E8">AUTOMATION LOGS</text>
+
+    <!-- Digest Preview Card -->
+    <rect x="15" y="50" width="225" height="155" rx="8" fill="#081116" stroke="#49352B" stroke-width="1"/>
+    <text x="25" y="70" font-family="'Courier New', monospace" font-size="9" font-weight="bold" fill="#FFD600">SAMPLE NEWSLETTER DIGEST</text>
+    <text x="25" y="90" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#F5EBDD">"Global Tech Pulse - Morning"</text>
+    <text x="25" y="110" font-family="'Courier New', monospace" font-size="8" fill="#F5EBDD" opacity="0.8">1. Breakthrough in Quantum Photonic chips...</text>
+    <text x="25" y="125" font-family="'Courier New', monospace" font-size="8" fill="#F5EBDD" opacity="0.8">2. New Open-Source Multimodal AI Models...</text>
+    <text x="25" y="140" font-family="'Courier New', monospace" font-size="8" fill="#F5EBDD" opacity="0.8">3. Clean Energy Datacenter Deployments...</text>
+    <text x="25" y="165" font-family="'Courier New', monospace" font-size="8" fill="#10B981">✓ FORMATTED FOR DESKTOP &amp; MOBILE</text>
+    <text x="25" y="180" font-family="'Courier New', monospace" font-size="8" fill="#20C9E8">✓ SUBSCRIBERS: 1,250 DISPATCHED</text>
+
+    <!-- SMTP Delivery Stats -->
+    <rect x="15" y="215" width="225" height="98" rx="8" fill="#081116" stroke="#10B981" stroke-width="1"/>
+    <text x="25" y="235" font-family="'Courier New', monospace" font-size="9" font-weight="bold" fill="#10B981">SMTP METRICS</text>
+    <text x="25" y="255" font-family="'Courier New', monospace" font-size="9" fill="#F5EBDD">PORT: 587 (TLS ENCRYPTED)</text>
+    <text x="25" y="272" font-family="'Courier New', monospace" font-size="9" fill="#F5EBDD">DELIVERY RATE: 100%</text>
+    <text x="25" y="292" font-family="'Courier New', monospace" font-size="9" font-weight="bold" fill="#FFD600">SCHEDULE: 07:00 AM IST (DAILY)</text>
+  </g>
+</svg>
+

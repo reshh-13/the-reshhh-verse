@@ -1,0 +1,296 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+html.dark {
+  --bg-main: #260D27;
+  --bg-secondary: #1F0B20;
+  --bg-card: #1A0C1E;
+  --bg-card-header: #220E27;
+  --bg-panel: #32102F;
+  --bg-input: #26122b;
+  --text-primary: #F5EBDD;
+  --text-secondary: #D8C1A6;
+  --text-muted: #8FA0C7;
+  --border-primary: rgba(255, 253, 248, 0.12);
+  --border-accent: #49352B;
+  --accent-pink: #F42B70;
+  --accent-purple: #6536D9;
+  --accent-cyan: #20C9E8;
+  --accent-blue: #3B5BDB;
+  --accent-yellow: #FFD600;
+  --shadow-comic: 4px 4px 0px #080F2B;
+  --halftone-c1: rgba(244, 43, 112, 0.18);
+  --halftone-c2: rgba(101, 54, 217, 0.15);
+  --selection-bg: #F42B70;
+  --selection-text: #260D27;
+}
+
+html.light {
+  --bg-main: #F5EBDD;
+  --bg-secondary: #E9DDCE;
+  --bg-card: #FFFDF8;
+  --bg-card-header: #EFE4D6;
+  --bg-panel: #EFE4D6;
+  --bg-input: #FAF3E8;
+  --text-primary: #49352B;
+  --text-secondary: #7B6658;
+  --text-muted: #8C7769;
+  --border-primary: rgba(73, 53, 43, 0.2);
+  --border-accent: #49352B;
+  --accent-pink: #F42B70;
+  --accent-purple: #6536D9;
+  --accent-cyan: #168FA8;
+  --accent-blue: #3B5BDB;
+  --accent-yellow: #FFD600;
+  --shadow-comic: 4px 4px 0px #49352B;
+  --halftone-c1: rgba(73, 53, 43, 0.12);
+  --halftone-c2: rgba(244, 43, 112, 0.12);
+  --selection-bg: #F42B70;
+  --selection-text: #FFFFFF;
+}
+
+/* ========================================================== */
+/* GLOBAL TEXT SELECTION PREVENTION & DRAG PROTECTION         */
+/* ========================================================== */
+html, body, *, *::before, *::after {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Preserve text selection inside editable inputs & textareas */
+input, textarea, [contenteditable="true"] {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+}
+
+body {
+  user-select: none;
+  -webkit-user-select: none;
+  color: var(--text-primary);
+  background: var(--bg-main);
+  font-family: var(--font-nunito), sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background-color: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+/* Halftone dot patterns adapting to active theme */
+.bg-halftone-dots {
+  background-image: radial-gradient(var(--halftone-c1) 1.5px, transparent 1.6px), radial-gradient(var(--halftone-c2) 1.5px, transparent 1.6px);
+  background-size: 16px 16px;
+  background-position: 0 0, 8px 8px;
+  opacity: 0.2;
+}
+
+.bg-halftone-light {
+  background-image: radial-gradient(rgba(245, 235, 221, 0.15) 1.5px, transparent 1.5px);
+  background-size: 14px 14px;
+}
+
+.bg-halftone-cyan {
+  background-image: radial-gradient(rgba(32, 201, 232, 0.28) 2px, transparent 2px);
+  background-size: 14px 14px;
+}
+
+.bg-halftone-pink {
+  background-image: radial-gradient(rgba(244, 43, 112, 0.22) 2px, transparent 2px);
+  background-size: 14px 14px;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #1B0B1D;
+  border-left: 1px solid #49352B;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #F42B70;
+  border-radius: 4px;
+  border: 2px solid #1B0B1D;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #6536D9;
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #E9DDCE;
+  border-left: 1px solid #D4C3B2;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #49352B;
+  border-radius: 4px;
+  border: 2px solid #E9DDCE;
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #F42B70;
+}
+
+/* Spider-Verse chromatic aberration effect on hover */
+.chromatic-hover {
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.chromatic-hover:hover {
+  text-shadow: -2px 0px 0px #20C9E8, 2px 0px 0px #F42B70;
+}
+
+.chromatic-box:hover {
+  box-shadow: -4px 0px 0px #20C9E8, 4px 0px 0px #F42B70, 6px 6px 0px #080F2B;
+}
+
+.font-bubble {
+  font-family: 'DynaPuff', 'Rubik Bubbles', 'Arial Rounded MT Bold', cursive, sans-serif;
+}
+
+/* Infinite Marquee Animations for Toolkit */
+@keyframes marquee-scroll-left {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes marquee-scroll-right {
+  0% { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee-scroll-left var(--marquee-duration, 34s) linear infinite;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee-scroll-right var(--marquee-duration, 34s) linear infinite;
+}
+
+.marquee-container:hover .animate-marquee-left,
+.marquee-container:hover .animate-marquee-right {
+  animation-play-state: paused;
+}
+
+/* Star Twinkling Animations for Constellations */
+@keyframes star-twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes star-pulse-gentle {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.1);
+  }
+}
+
+.animate-star-twinkle-1 {
+  animation: star-twinkle 3.8s ease-in-out infinite;
+}
+
+.animate-star-twinkle-2 {
+  animation: star-twinkle 5.2s ease-in-out 1.2s infinite;
+}
+
+.animate-star-twinkle-3 {
+  animation: star-twinkle 4.5s ease-in-out 2.4s infinite;
+}
+
+.animate-star-pulse {
+  animation: star-pulse-gentle 4s ease-in-out infinite;
+}
+
+/* Spider-Verse Multiverse Glitch Hover Effect (Reused across Powers & Developments) */
+@keyframes multiverse-glitch-snap {
+  0% {
+    transform: translate3d(0, 0, 0) skew(0deg);
+  }
+  15% {
+    transform: translate3d(-3px, 1.5px, 0) skew(-1deg);
+  }
+  30% {
+    transform: translate3d(3px, -1.5px, 0) skew(1deg);
+  }
+  45% {
+    transform: translate3d(-2px, -1px, 0) skew(-0.5deg);
+  }
+  60% {
+    transform: translate3d(2px, 1px, 0) skew(0.5deg);
+  }
+  75% {
+    transform: translate3d(-1px, 0.5px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) skew(0deg);
+  }
+}
+
+.multiverse-glitch-item {
+  position: relative;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease;
+}
+
+.multiverse-glitch-item:hover,
+.multiverse-glitch-item:focus-within {
+  animation: multiverse-glitch-snap 0.38s ease-out;
+}
+
+.multiverse-glitch-item:hover .multiverse-title,
+.multiverse-glitch-item:focus-within .multiverse-title {
+  text-shadow: -2px 0px 0px #20C9E8, 2px 0px 0px #F42B70;
+  transition: text-shadow 0.15s ease;
+}
+
+.multiverse-glitch-chip {
+  transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.multiverse-glitch-chip:hover,
+.multiverse-glitch-chip:focus {
+  transform: translate3d(-1px, -2px, 0) scale(1.06);
+  border-color: #20C9E8;
+  color: #FFFFFF;
+  box-shadow: -2.5px 1.5px 0px #20C9E8, 2.5px -1.5px 0px #F42B70, 0 0 12px rgba(32, 201, 232, 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-left,
+  .animate-marquee-right,
+  .animate-star-twinkle-1,
+  .animate-star-twinkle-2,
+  .animate-star-twinkle-3,
+  .animate-star-pulse,
+  .multiverse-glitch-item:hover {
+    animation: none;
+    animation-play-state: paused;
+  }
+}

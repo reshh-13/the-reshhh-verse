@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="spotBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0c1d"/>
+      <stop offset="100%" stop-color="#1b1433"/>
+    </linearGradient>
+
+    <pattern id="purpleHalftone" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="8" r="1.5" fill="#6536D9" opacity="0.18"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#spotBg)"/>
+  <rect width="800" height="500" fill="url(#purpleHalftone)"/>
+
+  <!-- Top Event Header Bar -->
+  <rect x="25" y="25" width="750" height="42" rx="8" fill="#18112c" stroke="#6536D9" stroke-width="1.5" stroke-opacity="0.5"/>
+  <circle cx="45" cy="46" r="6" fill="#20C9E8"/>
+  <text x="65" y="50" font-family="'Courier New', monospace" font-size="12" font-weight="bold" fill="#F5EBDD" letter-spacing="1">SPOT CONNECT // CAMPUS &amp; SYMPOSIUM ENGAGEMENT HUB</text>
+  
+  <rect x="535" y="34" width="115" height="24" rx="4" fill="#6536D9" fill-opacity="0.3" stroke="#6536D9" stroke-width="1"/>
+  <text x="548" y="50" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#20C9E8">LIVE ATTENDEES: 840</text>
+
+  <rect x="660" y="34" width="100" height="24" rx="4" fill="#F42B70" fill-opacity="0.25" stroke="#F42B70" stroke-width="1"/>
+  <text x="674" y="50" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#F42B70">STAGE: AUDI-1</text>
+
+  <!-- Left: Live Schedule & Interactive Stage Q&A -->
+  <g transform="translate(40, 95)">
+    <rect width="440" height="330" rx="12" fill="#130e24" stroke="#6536D9" stroke-width="1.5"/>
+
+    <!-- Event Banner -->
+    <rect x="15" y="15" width="410" height="55" rx="8" fill="#21153e"/>
+    <text x="30" y="38" font-family="'Arial Black', Impact, sans-serif" font-size="16" fill="#F5EBDD">NATIONAL HACKATHON &amp; TECH SYMPOSIUM</text>
+    <text x="30" y="56" font-family="'Courier New', monospace" font-size="10" fill="#20C9E8">MAIN TRACK: ARTIFICIAL INTELLIGENCE &amp; FULL-STACK SYSTEMS</text>
+
+    <!-- Live Q&A Stream Section -->
+    <rect x="15" y="80" width="410" height="235" rx="8" fill="#0c0817" stroke="#37245b" stroke-width="1"/>
+    <text x="30" y="105" font-family="'Courier New', monospace" font-size="11" font-weight="bold" fill="#FFD600">LIVE KEYNOTE Q&amp;A // REAL-TIME UPVOTES</text>
+
+    <!-- Question 1 (Top voted) -->
+    <rect x="25" y="115" width="390" height="60" rx="6" fill="#1c1333" stroke="#6536D9" stroke-width="1"/>
+    <!-- Upvote button -->
+    <rect x="35" y="125" width="38" height="40" rx="4" fill="#6536D9"/>
+    <text x="54" y="142" font-family="'Courier New', monospace" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">▲</text>
+    <text x="54" y="156" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle">128</text>
+    <!-- Question text -->
+    <text x="85" y="138" font-family="'Courier New', monospace" font-size="11" font-weight="bold" fill="#F5EBDD">"How does on-device edge ML optimize mobile latency?"</text>
+    <text x="85" y="158" font-family="'Courier New', monospace" font-size="9" fill="#20C9E8">Asked by Reshma S (Rec) • 2m ago • Answered live on Stage</text>
+
+    <!-- Question 2 -->
+    <rect x="25" y="185" width="390" height="55" rx="6" fill="#160e29"/>
+    <rect x="35" y="195" width="38" height="35" rx="4" fill="#2c1a4d"/>
+    <text x="54" y="210" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#A47758" text-anchor="middle">▲</text>
+    <text x="54" y="222" font-family="'Courier New', monospace" font-size="9" font-weight="bold" fill="#A47758" text-anchor="middle">74</text>
+    <text x="85" y="206" font-family="'Courier New', monospace" font-size="10" fill="#F5EBDD">"What are the best architectures for multimodal LLM RAG pipelines?"</text>
+    <text x="85" y="224" font-family="'Courier New', monospace" font-size="9" fill="#A47758">Asked by Team TechSparks • 6m ago</text>
+
+    <!-- Submit question box -->
+    <rect x="25" y="250" width="390" height="32" rx="6" fill="#1f153a" stroke="#F42B70" stroke-width="1"/>
+    <text x="40" y="271" font-family="'Courier New', monospace" font-size="10" fill="#F5EBDD" opacity="0.6">Type your question for the keynote speaker...</text>
+    <rect x="345" y="254" width="60" height="24" rx="4" fill="#F42B70"/>
+    <text x="375" y="270" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle">POST</text>
+  </g>
+
+  <!-- Right: Peer Matching & Connect Card -->
+  <g transform="translate(505, 95)">
+    <rect width="255" height="330" rx="12" fill="#160e28" stroke="#6536D9" stroke-width="1.5" stroke-opacity="0.5"/>
+    
+    <text x="20" y="32" font-family="'Courier New', monospace" font-size="11" font-weight="bold" fill="#20C9E8">SMART PEER MATCHMAKING</text>
+
+    <!-- Match 1 -->
+    <rect x="15" y="50" width="225" height="75" rx="8" fill="#1e1436" stroke="#20C9E8" stroke-width="1"/>
+    <circle cx="40" cy="78" r="16" fill="#6536D9"/>
+    <text x="40" y="83" font-family="'Courier New', monospace" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">AI</text>
+    <text x="68" y="72" font-family="'Courier New', monospace" font-size="11" font-weight="bold" fill="#F5EBDD">Arun K. (Mentor)</text>
+    <text x="68" y="88" font-family="'Courier New', monospace" font-size="9" fill="#20C9E8">MATCH: 94% • NLP &amp; Vision</text>
+    <text x="68" y="104" font-family="'Courier New', monospace" font-size="8" fill="#10B981">● CONNECTED NOW</text>
+
+    <!-- Match 2 -->
+    <rect x="15" y="135" width="225" height="75" rx="8" fill="#18102d"/>
+    <circle cx="40" cy="163" r="16" fill="#A47758"/>
+    <text x="40" y="168" font-family="'Courier New', monospace" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle">FS</text>
+    <text x="68" y="157" font-family="'Courier New', monospace" font-size="11" font-weight="bold" fill="#F5EBDD">Priya M. (Student)</text>
+    <text x="68" y="173" font-family="'Courier New', monospace" font-size="9" fill="#A47758">MATCH: 88% • Next.js &amp; PyTorch</text>
+    <text x="68" y="189" font-family="'Courier New', monospace" font-size="8" fill="#FFD600">● AVAILABLE IN HALL B</text>
+
+    <!-- Live Event Broadcast alert -->
+    <rect x="15" y="220" width="225" height="95" rx="8" fill="#0d0818" stroke="#F42B70" stroke-width="1"/>
+    <text x="25" y="242" font-family="'Courier New', monospace" font-size="9" font-weight="bold" fill="#F42B70">PUSH BROADCAST</text>
+    <text x="25" y="260" font-family="'Courier New', monospace" font-size="9" fill="#F5EBDD">"Workshop on LLM Fine-Tuning begins in 15 mins at Lab 4."</text>
+    <rect x="25" y="280" width="205" height="24" rx="4" fill="#6536D9"/>
+    <text x="127" y="296" font-family="'Courier New', monospace" font-size="9" font-weight="bold" fill="#FFFFFF" text-anchor="middle">ADD TO CALENDAR</text>
+  </g>
+</svg>
+

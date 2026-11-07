@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="restoreBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#140a17"/>
+      <stop offset="100%" stop-color="#241126"/>
+    </linearGradient>
+
+    <pattern id="pinkHalftone" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="8" r="1.5" fill="#F42B70" opacity="0.15"/>
+    </pattern>
+
+    <filter id="pinkGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#restoreBg)"/>
+  <rect width="800" height="500" fill="url(#pinkHalftone)"/>
+
+  <!-- Top Conservation Header Bar -->
+  <rect x="25" y="25" width="750" height="42" rx="8" fill="#1f0c23" stroke="#F42B70" stroke-width="1.5" stroke-opacity="0.4"/>
+  <circle cx="45" cy="46" r="6" fill="#F42B70"/>
+  <text x="65" y="50" font-family="'Courier New', monospace" font-size="12" font-weight="bold" fill="#F5EBDD" letter-spacing="1">RESTOREIQ // ARTIFACT CONSERVATION SUITE</text>
+  
+  <rect x="520" y="34" width="130" height="24" rx="4" fill="#6536D9" fill-opacity="0.3" stroke="#6536D9" stroke-width="1"/>
+  <text x="532" y="50" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#F5EBDD">MULTISPECTRAL: UV</text>
+
+  <rect x="660" y="34" width="100" height="24" rx="4" fill="#F42B70" fill-opacity="0.2" stroke="#F42B70" stroke-width="1"/>
+  <text x="674" y="50" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#F42B70">STATUS: ACTIVE</text>
+
+  <!-- Left: Artifact Canvas Split Comparison -->
+  <g transform="translate(40, 95)">
+    <!-- Canvas Frame -->
+    <rect width="440" height="330" rx="12" fill="#120614" stroke="#49352B" stroke-width="2"/>
+    
+    <!-- Left Half: Damaged Artifact with Fracture Lines -->
+    <rect x="15" y="15" width="200" height="260" rx="8" fill="#2d172f"/>
+    <!-- Vase silhouette -->
+    <path d="M 95 60 Q 115 60, 115 80 Q 115 120, 145 160 Q 155 190, 135 230 L 95 230 Q 75 190, 85 160 Q 115 120, 115 80 Q 115 60, 135 60" fill="#8c5835" stroke="#3d2214" stroke-width="2"/>
+    <!-- Crack Overlays -->
+    <path d="M 115 90 L 125 115 L 110 135 L 135 155 L 120 180 L 140 210" fill="none" stroke="#F42B70" stroke-width="2.5" filter="url(#pinkGlow)"/>
+    <path d="M 125 115 L 145 120 L 150 140" fill="none" stroke="#F42B70" stroke-width="1.8"/>
+    <path d="M 110 135 L 90 145 L 85 170" fill="none" stroke="#F42B70" stroke-width="1.8"/>
+    
+    <rect x="25" y="25" width="105" height="20" rx="4" fill="#000000" fill-opacity="0.75"/>
+    <text x="32" y="39" font-family="'Courier New', monospace" font-size="9" font-weight="bold" fill="#F42B70">DAMAGED SURFACE</text>
+
+    <!-- Center Split Line -->
+    <line x1="220" y1="15" x2="220" y2="275" stroke="#FFD600" stroke-width="2" stroke-dasharray="4 4"/>
+    <circle cx="220" cy="145" r="14" fill="#FFD600" stroke="#000000" stroke-width="2"/>
+    <path d="M 215 145 L 217 141 L 217 149 Z M 225 145 L 223 141 L 223 149 Z" fill="#000000"/>
+
+    <!-- Right Half: AI Reconstructed Surface -->
+    <rect x="225" y="15" width="200" height="260" rx="8" fill="#1f1022"/>
+    <!-- Fully restored vase -->
+    <path d="M 305 60 Q 325 60, 325 80 Q 325 120, 355 160 Q 365 190, 345 230 L 305 230 Q 285 190, 295 160 Q 325 120, 325 80 Q 325 60, 345 60" fill="#a86d44" stroke="#FFD600" stroke-width="1.5"/>
+    <!-- Restored ornamental gold pattern -->
+    <circle cx="325" cy="135" r="18" fill="none" stroke="#FFD600" stroke-width="1.5"/>
+    <circle cx="325" cy="175" r="14" fill="none" stroke="#20C9E8" stroke-width="1.5"/>
+    
+    <rect x="235" y="25" width="135" height="20" rx="4" fill="#000000" fill-opacity="0.75"/>
+    <text x="242" y="39" font-family="'Courier New', monospace" font-size="9" font-weight="bold" fill="#20C9E8">AI GENERATIVE INPAINT</text>
+
+    <!-- Bottom Canvas Control strip -->
+    <rect x="15" y="285" width="410" height="34" rx="6" fill="#1b0c1e"/>
+    <text x="30" y="306" font-family="'Courier New', monospace" font-size="11" fill="#F5EBDD">INPAINTING FIDELITY: 96.8% // SSIM INDEX: 0.94</text>
+    <rect x="345" y="291" width="70" height="22" rx="4" fill="#FFD600"/>
+    <text x="357" y="306" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#260D27">DIFFUSION</text>
+  </g>
+
+  <!-- Right: Restoration Analytics & Ledger -->
+  <g transform="translate(505, 95)">
+    <rect width="255" height="330" rx="12" fill="#1c0c20" stroke="#F42B70" stroke-width="1.5" stroke-opacity="0.4"/>
+    
+    <text x="20" y="32" font-family="'Courier New', monospace" font-size="11" font-weight="bold" fill="#F42B70">CONSERVATION DIAGNOSTICS</text>
+
+    <!-- Metric 1 -->
+    <text x="20" y="65" font-family="'Courier New', monospace" font-size="10" fill="#F5EBDD">FRACTURE SEGMENTATION</text>
+    <text x="235" y="65" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#F42B70" text-anchor="end">68% RESOLVED</text>
+    <rect x="20" y="73" width="215" height="6" rx="3" fill="#2d1334"/>
+    <rect x="20" y="73" width="146" height="6" rx="3" fill="#F42B70"/>
+
+    <!-- Metric 2 -->
+    <text x="20" y="105" font-family="'Courier New', monospace" font-size="10" fill="#F5EBDD">CHROMATIC PIGMENT MATCH</text>
+    <text x="235" y="105" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#20C9E8" text-anchor="end">94.5% ACCURACY</text>
+    <rect x="20" y="113" width="215" height="6" rx="3" fill="#2d1334"/>
+    <rect x="20" y="113" width="203" height="6" rx="3" fill="#20C9E8"/>
+
+    <!-- Curator Ledger Card -->
+    <rect x="15" y="140" width="225" height="110" rx="8" fill="#130716" stroke="#6536D9" stroke-width="1"/>
+    <text x="25" y="162" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#FFD600">CURATOR LEDGER ENTRY #812</text>
+    <text x="25" y="180" font-family="'Courier New', monospace" font-size="9" fill="#F5EBDD" opacity="0.8">ITEM: Terracotta Amphora (4th BCE)</text>
+    <text x="25" y="196" font-family="'Courier New', monospace" font-size="9" fill="#F5EBDD" opacity="0.8">ACTION: Surface micro-crack inpaint</text>
+    <text x="25" y="212" font-family="'Courier New', monospace" font-size="9" fill="#F5EBDD" opacity="0.8">MODEL: Guided Latent Diffusion</text>
+    <text x="25" y="235" font-family="'Courier New', monospace" font-size="9" font-weight="bold" fill="#20C9E8">HASH: 0x9f4a...e82c [VERIFIED]</text>
+
+    <!-- Action button -->
+    <rect x="15" y="265" width="225" height="35" rx="6" fill="#F42B70"/>
+    <text x="127" y="287" font-family="'Courier New', monospace" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle">EXPORT PRESERVATION REPORT</text>
+  </g>
+</svg>
+
